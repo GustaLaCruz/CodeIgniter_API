@@ -8,11 +8,26 @@ class Produtos extends Migration
 {
     public function up()
     {
-        //
+        $this->forge->addField([
+            'id'=>[
+                'type'=>'int',
+                'auto_increment'=>true
+            ],
+            'descricao'=>[
+                'type'=>'varchar',
+                'constraint'=>'100',
+            ],
+            'valor'=>[
+                'type'=>'double'
+            ]
+
+        ]);
+        $this->forge->addKey('id',true);
+        $this->forge->createTable('tb_produtos');
     }
 
     public function down()
     {
-        //
+        $this->forge->dropTable('tb_produtos');
     }
 }
