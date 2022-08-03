@@ -8,7 +8,7 @@ class SeedProdutos extends Seeder
 {
     public function run()
     {
-        $descricao =['PC Gamer Kratos','PC Gamer Asgard','PC Gamer Valhalla','PC Gamer Loki','PC Gamer Odin','PC Gamer Balder'];
+        $descricao =['PC Gamer Kratos','PC Gamer Asgard','PC Gamer Valhalla','PC Gamer Loki','PC Gamer Odin','PC Gamer Balde'];
         $valor =[9000,7800,15000,4500,23000,7000];
         for($x = 0; $x<6; $x++){
             $data = [
