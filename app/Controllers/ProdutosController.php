@@ -5,7 +5,7 @@ namespace App\Controllers;
 use CodeIgniter\RESTful\ResourceController;
 
 
-class Produtos extends ResourceController
+class ProdutosController extends ResourceController
 {
     private $produtosModel;
 
@@ -19,6 +19,11 @@ class Produtos extends ResourceController
             return $this->response->setJson($data);
         }
 
+        public function produto($id)
+        {
+            $data =  $this->produtosModel->getProduto($id);
+            return $this->response->setJson($data);
+        }
 
 
 

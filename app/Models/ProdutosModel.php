@@ -9,4 +9,8 @@ class ProdutosModel extends Model
    protected $table ='tb_produtos';
    protected $primaryKey = 'id';
    protected $allowedFields = ['descricao', 'valor']; 
+
+   public function getProduto($id){
+        return $this->asArray()->where(['id'=>$id])->first();
+   }
 }
